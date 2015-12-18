@@ -1,4 +1,4 @@
-FROM babim/debianbase
+FROM babim/hhvm:server
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
 
