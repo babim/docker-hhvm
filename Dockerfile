@@ -18,6 +18,7 @@ RUN apt-get clean && \
     
 COPY php.ini /etc/hhvm/php.ini
 
+EXPOSE 80 443
 ENV LC_ALL C.UTF-8
 
 CMD ["hhvm", "-a"]
