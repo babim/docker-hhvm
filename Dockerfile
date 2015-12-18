@@ -12,6 +12,6 @@ RUN apt-get clean && \
 COPY php.ini /etc/hhvm/php.ini
 
 ENV LC_ALL C.UTF-8
-EXPOSE 22 80
+EXPOSE 22 80 443
 CMD ["hhvm", "-a"]
 CMD ["/usr/sbin/sshd", "-D"]
