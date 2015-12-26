@@ -10,5 +10,5 @@ VOLUME ["/var/www"]
 
 EXPOSE 9000 22
 
-RUN echo "hhvm --mode=server" > /startup.sh && echo "/usr/sbin/sshd -D" >> /startup.sh && chmod +x /startup.sh
+RUN echo "service ssh start" > /startup.sh && echo "hhvm --mode=server" >> /startup.sh && chmod +x /startup.sh
 CMD ["/startup.sh"]
