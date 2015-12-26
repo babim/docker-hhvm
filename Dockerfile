@@ -22,5 +22,5 @@ ENV TZ Asia/Ho_Chi_Minh
 EXPOSE 22 80 443
 
 # Define default command.
-RUN echo "hhvm -a" > /startup.sh && echo "/usr/sbin/sshd -D" >> /startup.sh && chmod +x /startup.sh
+RUN echo "service ssh start" > /startup.sh && echo "hhvm -a" >> /startup.sh && chmod +x /startup.sh
 CMD ["/startup.sh"]
