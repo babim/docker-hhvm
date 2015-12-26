@@ -20,5 +20,7 @@ VOLUME ["/var/www"]
 ENV LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 EXPOSE 22 80 443
-CMD ["hhvm", "-a"]
-CMD ["/usr/sbin/sshd", "-D"]
+
+# Define default command.
+RUN echo "hhvm -a" > /startup.sh && echo "/usr/sbin/sshd -D" >> /startup.sh && chmod +x /startup.sh
+CMD ["/startup.sh"]
