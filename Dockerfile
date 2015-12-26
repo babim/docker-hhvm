@@ -9,5 +9,6 @@ ENV TZ Asia/Ho_Chi_Minh
 VOLUME ["/var/www"]
 
 EXPOSE 9000 22
-CMD ["hhvm", "--mode=server"]
-CMD ["/usr/sbin/sshd", "-D"]
+
+RUN echo "hhvm --mode=server" > /startup.sh && echo "/usr/sbin/sshd -D" >> /startup.sh && chmod +x /startup.sh
+CMD ["/startup.sh"]
