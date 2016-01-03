@@ -1,7 +1,5 @@
 FROM babim/debianbase
 
-MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
 RUN wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | apt-key add -
 RUN echo 'deb http://dl.hhvm.com/debian jessie main' > /etc/apt/sources.list.d/hhvm.list
 RUN apt-get update && \
@@ -25,7 +23,5 @@ WORKDIR /var/www
 VOLUME ["/var/www"]
 
 EXPOSE 80 443
-ENV TZ Asia/Ho_Chi_Minh
-ENV LC_ALL C.UTF-8
 
 CMD ["hhvm", "-a"]
