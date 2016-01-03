@@ -1,10 +1,5 @@
 FROM babim/hhvm:server.ssh
 
-MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
-ENV LC_ALL en_US.UTF-8
-ENV TZ Asia/Ho_Chi_Minh
-
 # Define mountable directories.
 VOLUME ["/var/www"]
 
